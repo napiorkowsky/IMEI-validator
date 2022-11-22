@@ -3,11 +3,9 @@ def sumDig( n ):
     while n > 0:
         a = a + n % 10
         n = int(n / 10)
- 
-    return a
+     return a
  
 def isValidEMEI(n):
- 
     s = str(n)
     l = len(s)
  
@@ -19,21 +17,17 @@ def isValidEMEI(n):
     for i in range(15, 0, -1):
         d = (int)(n % 10)
         if i % 2 == 0:
- 
-            d = 2 * d
- 
-        sum = sum + sumDig(d)
+             d = 2 * d
+         sum = sum + sumDig(d)
         n = n / 10
     return (sum % 10 == 0)
  
 for i in range(10):
-	n = "3532150307532" + str(i) + "0"
+	n = "3535353535235" + str(i) + "0"
 	if isValidEMEI(int(n)):
-		print(n, "Valid IMEI Code")
+		print(n, "Valid IMEI Code !!! ")
 	else:
 		print(n, "Invalid IMEI Code")
-		
-		
 		
 		
 		
